@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+body, button {
+    font-family: 'Source Sans 3', sans-serif!important
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+$primary: #ff0050;
+
+button {
+    display: inline-block;
+    border: 2px solid $primary;
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    min-width: 200px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:not(.selected):not(:hover) {
+        color: $primary;
+        background-color: rgba(0,0,0,0);
+    } 
+    &:hover, .selected {
+        color: white;
+        background-color: $primary;
+    }
+}
+
+.underline {
+    text-decoration: underline;
+}
